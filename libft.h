@@ -6,7 +6,7 @@
 /*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:32:52 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/05 19:18:21 by tony             ###   ########.fr       */
+/*   Updated: 2024/11/05 20:31:54 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int		ft_tolower(int c);
 int		ft_atoi(const char *nptr);
 void	*ft_memset(void *s, int c, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
