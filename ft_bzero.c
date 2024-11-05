@@ -1,42 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 14:17:58 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/05 20:36:04 by tony             ###   ########.fr       */
+/*   Created: 2024/11/05 20:40:01 by tony              #+#    #+#             */
+/*   Updated: 2024/11/05 21:14:19 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char *ptr = (unsigned char *)s;
-	unsigned char value = (unsigned char)c;
 
 	while (n > 0)
 	{
-		*ptr = value;
+		*ptr = 0;
 		ptr++;
 		n--;
 	}
-	return (s);
 }
 // #include <stdio.h>
-// int	main()
-// {
-// 	char buffer[3];
-// 	int i = 0;
+// #include <unistd.h>
 
-// 	ft_memset(buffer, 'G', 3);
-// 	while (i < 3)
-// 	{
-// 		printf("%c", buffer[i]);
-// 		i++;
-// 	}
-// 	printf("\n");
-// 	return (0);
+// int main()
+// {
+//     char buffer[10] = "HelloWorld";
+//     ft_bzero(buffer, 9);
+// 	int i;
+//     i = 0;
+//     while (i < 10) {
+//         if (buffer[i] == '\0') 
+// 		{
+//             write (1, "0 ", 2);
+//         } 
+// 		else 
+// 		{
+//             printf("%c ", buffer[i]);
+//         }
+//         i++;
+//     }
+//     printf("\n");
+
+//     return 0;
 // }
