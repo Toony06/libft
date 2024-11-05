@@ -6,18 +6,18 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:55:45 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/05 12:09:13 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/05 14:21:28 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char str)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
 		i++;
 	}
