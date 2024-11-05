@@ -1,0 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/04 13:11:44 by toroman           #+#    #+#             */
+/*   Updated: 2024/11/05 12:09:32 by toroman          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isalnum(int c)
+{
+	return (ft_isaplha(c) || ft_isdigit(c));
+}
+//#include <stdio.h>
+//int	main()
+//{
+//	int c = 'a';
+//	int d = 'A';
+//	int f = '0';
+//	printf("%d\n", ft_isalnum(c));
+//	printf("%d\n", ft_isalnum(d));
+//	printf("%d\n", ft_isalnum(f));
+//	return (0);
+//}
