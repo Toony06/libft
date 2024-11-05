@@ -1,42 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 14:17:58 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/05 19:00:47 by tony             ###   ########.fr       */
+/*   Created: 2024/11/05 18:24:28 by tony              #+#    #+#             */
+/*   Updated: 2024/11/05 18:37:42 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	unsigned char *ptr = (unsigned char *)s;
-	unsigned char value = (unsigned char)c;
+	int	i;
+	int	result;
+	int	signe;
 
-	while (n > 0)
+	i = 0;
+	result = 0;
+	signe = 1;
+	while (nptr[i] == ' ' || nptr[i] >= 9 && nptr[i] <= 13)
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		*ptr = value;
-		ptr++;
-		n--;
+		signe *= -1;
+		i++;
 	}
-	return (s);
+	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (result * signe);
 }
 // #include <stdio.h>
-// int	main()
+// int	main(int ac, char **av)
 // {
-// 	char buffer[3];
-// 	int i = 0;
-
-// 	ft_memset(buffer, 'G', 3);
-// 	while (i < 3)
+// 	if (ac == 2)
 // 	{
-// 		printf("%c", buffer[i]);
-// 		i++;
+// 		printf("%d\n", ft_atoi(av[1]));
 // 	}
-// 	printf("\n");
-// 	return (0);
 // }

@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 12:56:09 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/05 12:12:09 by toroman          ###   ########.fr       */
+/*   Created: 2024/11/05 18:05:23 by tony              #+#    #+#             */
+/*   Updated: 2024/11/05 18:19:12 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_tolower(int c)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i] && i < n)
-		i++;
-	if (i != n)
-		return (s1[i] - s2[i]);
-	return (0);
+	if (c >= 65 && c <= 90)
+		c = c + 32;
+	return (c);
 }
+// #include <stdio.h>
+// int	main()
+// {
+// 	char uppercase = 'Z';
+// 	printf("%c\n", ft_tolower(uppercase));
+// 	return (0);
+// }
