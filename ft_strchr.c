@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 10:50:14 by tony              #+#    #+#             */
-/*   Updated: 2024/11/06 20:31:49 by tony             ###   ########.fr       */
+/*   Created: 2024/11/06 20:36:17 by tony              #+#    #+#             */
+/*   Updated: 2024/11/06 21:00:02 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	char *d = (char *)dest;
-	const char *s = (const char *)src;
-
-	while (n > 0)
+	while (*s)
 	{
-		*d = *s;
-		d++;
+		if (*s == (char)c)
+			return(char *)s;
 		s++;
-		n--;
 	}
-	return (dest);
+	if (c == '\0')
+		return (char *)s;
+	return (NULL);
 }
 // #include <stdio.h>
 // int	main()
 // {
-// 	char src[] = "Hello ";
-// 	char dest[20] = "world";
-// 	ft_memcpy(dest, src, sizeof(src));
-// 	printf("%s\n", dest);
-// 	return (0);
+// 	const char str[] = "salut la france";
+// 	char *result = ft_strchr(str, 'a');
+// 	printf("%s\n", result);
+// 	return 0;
 // }

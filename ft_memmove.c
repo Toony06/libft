@@ -1,37 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 10:50:14 by tony              #+#    #+#             */
-/*   Updated: 2024/11/06 20:31:49 by tony             ###   ########.fr       */
+/*   Created: 2024/11/06 20:15:54 by tony              #+#    #+#             */
+/*   Updated: 2024/11/06 20:30:25 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char *d = (char *)dest;
-	const char *s = (const char *)src;
+	size_t			i;
+	unsigned char	*d;
+	unsigned const char *s;
 
-	while (n > 0)
+	i = 0;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (d < s)
 	{
-		*d = *s;
-		d++;
-		s++;
-		n--;
+		while (i < n)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	else if (d > s)
+	{
+		i = n - 1;
+		while (i < n)
+		{
+			d[i] = s[i];
+			i--;
+		}
 	}
 	return (dest);
 }
 // #include <stdio.h>
 // int	main()
 // {
-// 	char src[] = "Hello ";
-// 	char dest[20] = "world";
-// 	ft_memcpy(dest, src, sizeof(src));
+// 	char dest[] = "hello";
+// 	char src[] = "toietmoi";
+// 	ft_memmove(dest, src, 3);
 // 	printf("%s\n", dest);
 // 	return (0);
 // }
