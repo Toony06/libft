@@ -1,50 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 20:40:01 by tony              #+#    #+#             */
-/*   Updated: 2024/11/06 23:18:48 by tony             ###   ########.fr       */
+/*   Created: 2024/11/06 22:45:04 by tony              #+#    #+#             */
+/*   Updated: 2024/11/06 22:52:56 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
-	unsigned char *ptr;
-
+	int	i;
+	
 	i = 0;
-	ptr = (unsigned char *)s;
-
-	while (i < n)
-	{
-		ptr[i] = 0;
+	while (s[i] != '\0')
 		i++;
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return (char *)&s[i];
+			i--;
 	}
+	return NULL;
 }
 // #include <stdio.h>
-// #include <unistd.h>
-
-// int main()
+// int	main()
 // {
-//     char str[] = "Hello World";
-//     ft_bzero(str, 9);
-// 	int i;
-//     i = 0;
-//     while (i <= 10) {
-//         if (str[i] == '\0') 
-// 		{
-//             write (1, "0 ", 2);
-//         } 
-// 		else 
-// 		{
-//             printf("%c", str[i]);
-//         }
-//         i++;
-//     }
-//     return 0;
+// 	char s[] = "alors la zone";
+// 	char *resultat = ft_strrchr(s, 'o');
+// 	printf("%s\n", resultat);
 // }

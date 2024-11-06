@@ -6,7 +6,7 @@
 /*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 20:36:17 by tony              #+#    #+#             */
-/*   Updated: 2024/11/06 21:00:02 by tony             ###   ########.fr       */
+/*   Updated: 2024/11/06 23:20:37 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,22 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*s == (char)c)
-			return(char *)s;
-		s++;
+		if (s[i] == (char)c)
+			return(char *)&s[i];
+		i++;
 	}
-	if (c == '\0')
-		return (char *)s;
 	return (NULL);
 }
 // #include <stdio.h>
 // int	main()
 // {
 // 	const char str[] = "salut la france";
-// 	char *result = ft_strchr(str, 'a');
+// 	char *result = ft_strchr(str, 'z');
 // 	printf("%s\n", result);
 // 	return 0;
 // }
