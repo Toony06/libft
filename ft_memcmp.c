@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 20:36:17 by tony              #+#    #+#             */
-/*   Updated: 2024/11/07 14:51:57 by tony             ###   ########.fr       */
+/*   Created: 2024/11/07 15:05:02 by tony              #+#    #+#             */
+/*   Updated: 2024/11/07 15:25:05 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
 
 	i = 0;
-	while (s[i])
+	ptr1 = (unsigned char *)s1;
+	ptr2 = (unsigned char *)s2;
+	while(i < n)
 	{
-		if (s[i] == (char)c)
-			return(char *)&s[i];
+		if (ptr1[i] != ptr2[i])
+			return (ptr1[i] - ptr2[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
+
 }
 // #include <stdio.h>
-// int	main()
+
+// int main()
 // {
-// 	const char str[] = "salut a france";
-// 	char *result = ft_strchr(str, 'f');
-// 	printf("%s\n", result);
-// 	return 0;
+//     char str1[] = "alors la zone";
+//     char str2[] = "alors la street";
+//     size_t n = 15;
+//     printf("%d\n", ft_memcmp(str1, str2, n));
+//     return 0;
 // }

@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 20:36:17 by tony              #+#    #+#             */
-/*   Updated: 2024/11/07 14:51:57 by tony             ###   ########.fr       */
+/*   Created: 2024/11/07 14:38:46 by tony              #+#    #+#             */
+/*   Updated: 2024/11/07 14:51:48 by tony             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*ptr;
 
 	i = 0;
-	while (s[i])
+	ptr = (unsigned char *)s;
+	while (i < n)
 	{
-		if (s[i] == (char)c)
-			return(char *)&s[i];
+		if (ptr[i] == (unsigned char)c)
+			return (&ptr[i]);
 		i++;
 	}
 	return (NULL);
@@ -28,8 +30,8 @@ char	*ft_strchr(const char *s, int c)
 // #include <stdio.h>
 // int	main()
 // {
-// 	const char str[] = "salut a france";
-// 	char *result = ft_strchr(str, 'f');
-// 	printf("%s\n", result);
-// 	return 0;
+// 	char	str[] = "wewewe \0la zone";
+// 	int	c = 'l';
+// 	void	*result = ft_memchr(str, c, 10);
+// 	printf("%s\n", (char *)result);
 // }
