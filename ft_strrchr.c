@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 22:45:04 by tony              #+#    #+#             */
-/*   Updated: 2024/11/07 14:34:55 by tony             ###   ########.fr       */
+/*   Updated: 2024/11/08 14:04:50 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (s[i] != '\0')
 		i++;
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return (char *)&s[i];
-			i--;
+			return ((char *)&s[i]);
+		i--;
 	}
-	return NULL;
+	return (NULL);
 }
 // #include <stdio.h>
 // int	main()
