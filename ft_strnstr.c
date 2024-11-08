@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:37:00 by tony              #+#    #+#             */
-/*   Updated: 2024/11/08 21:13:56 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 22:22:57 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	i = 0;
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
-	if (ptr2[j] == '\0')
-		return ((char *)ptr1);
+	j = 0;
 	while (ptr1[i] && i < len)
 	{
 		if (ptr1[i] == ptr2[j])
@@ -40,8 +39,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 }
 //int	main()
 //{
-//	char str[] = "hello tout le monde";
-//	char ptr[] = "tout";
+//	char str[] = "fafazures";
+//	char ptr[] = "fares";
 //	printf("%s\n", ft_strnstr(str, ptr, 15));
 //	return (0);
 //}
