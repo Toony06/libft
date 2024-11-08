@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 19:03:50 by tony              #+#    #+#             */
-/*   Updated: 2024/11/08 13:59:57 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:32:52 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[len_src + i] = '\0';
 	return (len_dst + len_src);
 }
-// #include <stdio.h>
 // int	main()
 // {
 // 	char dst[20] = "hello";

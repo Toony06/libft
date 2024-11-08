@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:11:44 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/05 12:09:32 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:31:41 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	ft_isalnum(int c)
 {
 	return (ft_isaplha(c) || ft_isdigit(c));
 }
-//#include <stdio.h>
 //int	main()
 //{
 //	int c = 'a';

@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:40:01 by tony              #+#    #+#             */
-/*   Updated: 2024/11/08 13:51:35 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:32:01 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-// #include <stdio.h>
-// #include <unistd.h>
 
 // int main()
 // {

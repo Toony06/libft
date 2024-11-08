@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:55:52 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/05 12:10:07 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:31:49 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-//#include <stdio.h>
 //int	main (void)
 //{
 //	int	c = '4';

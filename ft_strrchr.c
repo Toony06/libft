@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 22:45:04 by tony              #+#    #+#             */
-/*   Updated: 2024/11/08 14:04:50 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:33:24 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-// #include <stdio.h>
 // int	main()
 // {
 // 	char s[] = "alors la zone";

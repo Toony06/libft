@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 18:24:28 by tony              #+#    #+#             */
-/*   Updated: 2024/11/05 18:37:42 by tony             ###   ########.fr       */
+/*   Updated: 2024/11/08 20:31:55 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * signe);
 }
-// #include <stdio.h>
 // int	main(int ac, char **av)
 // {
 // 	if (ac == 2)

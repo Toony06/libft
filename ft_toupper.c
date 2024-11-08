@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:39:02 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/05 17:54:48 by tony             ###   ########.fr       */
+/*   Updated: 2024/11/08 20:33:41 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
-//#include <stdio.h>
 //int	main()
 //{
 //	char lower = 'a';

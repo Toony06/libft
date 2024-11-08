@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:51:04 by tony              #+#    #+#             */
-/*   Updated: 2024/11/08 13:59:37 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:32:48 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char	*ft_strdup(const char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-// #include <stdio.h>
 // int	main()
 // {
 // 	char	*str;

@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:25:27 by tony              #+#    #+#             */
-/*   Updated: 2024/11/08 14:02:25 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:33:12 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-// #include <stdio.h>
-
 // int main()
 // {
 //     char str1[] = "Hello, World!";

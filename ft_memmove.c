@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 20:15:54 by tony              #+#    #+#             */
-/*   Updated: 2024/11/08 13:54:48 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:36:14 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-// #include <stdio.h>
 // int	main()
 // {
 // 	char dest[] = "hello";

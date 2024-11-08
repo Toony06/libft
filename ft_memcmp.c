@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:05:02 by tony              #+#    #+#             */
-/*   Updated: 2024/11/08 13:52:10 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:48:51 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-// #include <stdio.h>
-
 // int main()
 // {
 //     char str1[] = "alors la zone";

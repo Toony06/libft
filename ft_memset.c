@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:17:58 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/08 13:56:19 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:32:41 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-// #include <stdio.h>
 // int	main()
 // {
 // 	char str[3];
