@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 19:42:33 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/10 20:18:38 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/10 20:32:15 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	n = ft_strlen(s1) - 1;
-	if (!set)
+	if (!set || *set == '\0')
 		return (ft_strdup(s1));
-	if (!s1)
+	if (!s1 || *s1 == '\0')
 		return (NULL);
 	while (ft_strchr(set, s1[i]) && s1[i])
 		i++;
-	if (s1[i] != 0)
+	if (s1[i] != '\0')
 	{
 		while (s1[n] && ft_strchr(set, s1[n]))
 			n--;
