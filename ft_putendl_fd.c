@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 12:55:52 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/08 22:40:28 by toroman          ###   ########.fr       */
+/*   Created: 2024/11/10 13:29:56 by toroman           #+#    #+#             */
+/*   Updated: 2024/11/10 13:35:39 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write (fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }
-//int	main (void)
+//int	main()
 //{
-//	int	c = '4';
-//	printf("%d\n", ft_isalpha(c));
-//	return (0);
+//	char	*str = "salut";
+//	ft_putendl_fd(str, 1);
 //}
