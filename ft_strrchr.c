@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 22:45:04 by tony              #+#    #+#             */
-/*   Updated: 2024/11/08 21:37:41 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/10 18:17:46 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	long	i;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	while (i > 0)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return ((char *)&s[i]);
+			return ((char *)s + i);
 		i--;
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 13:29:56 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/10 13:35:39 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/10 17:49:13 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,14 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
+	if (s != NULL && fd >= 0)
 	{
-		write (fd, &s[i], 1);
-		i++;
+		ft_putstr_fd(s, fd);
+		ft_putchar_fd('\n', fd);
 	}
-	write(fd, "\n", 1);
 }
 //int	main()
 //{
-//	char	*str = "salut";
-//	ft_putendl_fd(str, 1);
+//	char	*s= NULL;
+//	ft_putendl_fd(s, 1);
 //}

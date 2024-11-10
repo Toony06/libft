@@ -1,44 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/10 13:53:40 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/10 19:46:45 by toroman          ###   ########.fr       */
+/*   Created: 2024/11/10 19:42:33 by toroman           #+#    #+#             */
+/*   Updated: 2024/11/10 20:18:38 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
+	char	*str;
 	size_t	i;
-	char	*result;
+	size_t	n;
 
 	i = 0;
-	if (s == NULL)
+	n = ft_strlen(s1) - 1;
+	if (!set)
+		return (ft_strdup(s1));
+	if (!s1)
 		return (NULL);
-	if (start > ft_strlen(s))
-		return (ft_strdup(""));
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	result = malloc(sizeof(char) * (len + 1));
-	if (result == NULL)
-		return (NULL);
-	while (i < len)
-	{
-		result[i] = s[i + start];
+	while (ft_strchr(set, s1[i]) && s1[i])
 		i++;
+	if (s1[i] != 0)
+	{
+		while (s1[n] && ft_strchr(set, s1[n]))
+			n--;
 	}
-	result[i] = '\0';
-	return (result);
+	str = ft_substr(s1, i, n - i + 1);
+	return (str);
 }
 //int	main()
 //{
-//	char	*s = "tony fares";
-//	char	*res = ft_substr(s, 5, 10);
-//	printf ("%s\n", res);
-//	free (res);
+//	char	*s1 = "		Tony es la 		 	\n";
+//	char	*set = " \t\n";
+//	char	*trimed = ft_strtrim(s1, set);
+//	printf("%s\n", trimed);
+//	free (trimed);
+//	return (0);
 //}
