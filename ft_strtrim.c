@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 19:42:33 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/10 20:38:05 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/11 15:40:05 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	n;
 
-	i = 0;
-	n = ft_strlen(s1) - 1;
 	if (!s1)
 		return (NULL);
 	if (!set || *set == '\0')
 		return (ft_strdup(s1));
+	i = 0;
+	n = ft_strlen(s1) - 1;
 	while (ft_strchr(set, s1[i]) && s1[i])
 		i++;
 	if (s1[i] != '\0')
@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 //int	main()
 //{
-//	char	*s1 = "		Tony es la 		 	\n";
+//	char	*s1 = " 		Tony es la 		 	\n";
 //	char	*set = " \t\n";
 //	char	*trimed = ft_strtrim(s1, set);
 //	printf("%s\n", trimed);

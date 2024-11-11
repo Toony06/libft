@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 20:36:17 by tony              #+#    #+#             */
-/*   Updated: 2024/11/10 19:40:52 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/11 14:35:53 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *s, int c)
 // int	main()
 // {
 // 	const char str[] = "salut a france";
-// 	char *result = ft_strchr(str, 'f');
+// 	char *result = ft_strchr(str, 'p');
 // 	printf("%s\n", result);
 // 	return 0;
 // }
