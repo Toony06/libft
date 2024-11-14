@@ -6,92 +6,83 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:40:19 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/13 17:43:18 by toroman          ###   ########.fr       */
+/*   Updated: 2024/11/14 17:53:49 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	countword(const char *s, char c)
+static int	ft_countword(char const *s, char c)
 {
 	int	i;
-	int	res;
-	int	mot;
+	int	j;
 
 	i = 0;
-	res = 0;
-	mot = 0;
+	j = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
-		{
-			if (!mot)
-			{
-				res++;
-				mot = 1;
-			}
-		}
-		else
-			mot = 0;
-		i++;
+		while (s[i] == c && s[i])
+			i++;
+		if (s[i])
+			j++;
+		while (s[i] != c && s[i])
+			i++;
 	}
-	return (res);
+	return (j);
 }
 
-static	char	*lenword(const char *s, int start, int end)
+static	char	*lenword(char **res, const char *s, char c)
 {
-	char	*search;
-	int		i;
+	int	len;
+	int	i;
 
-	if (!s || start >= end || start < 0 || end < 0)
-		return (NULL);
-	search = malloc(sizeof(char) * (end - start + 1));
-	if (!search)
-		return (NULL);
 	i = 0;
-	while (start < end)
-		search[i++] = s[start++];
-	search[i] = '\0';
-	return (search);
+	while (*s)
+	{
+		len = 0;
+		while (*s == c && *s)
+			s++;
+		while (*s != c && *s)
+		{
+			len++;
+			s++;
+		}
+		if (len > 0)
+		{
+			res[i] = malloc(len + 1);
+			if (res[i] == NULL)
+				return (NULL);
+			ft_strlcpy(res[i], s - len, len + 1);
+			i++;
+		}
+	}
+	return (res[i]);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**split;
-	int		start;
-	int		end;
-	int		i;
-	int		size;
+	int				mot;
+	char			**res;
 
-	i = 0;
-	size = countword(s, c);
-	split = malloc(sizeof(char *) * (size + 1));
-	if (!split)
+	if (!s)
 		return (NULL);
-	while (i < size)
-	{
-		while (s[start] && s[start] == c)
-			start++;
-		end = start + 1;
-		while (s[end] && s[end] != c)
-			end++;
-		split[i] = lenword(s, start, end);
-		start = end + 1;
-		i++;
-	}
-	split[i] = '\0';
-	return (split);
+	mot = ft_countword(s, c);
+	res = malloc(sizeof(char *) * (mot + 1));
+	if (!res)
+		return (NULL);
+	res[mot] = NULL;
+	lenword(res, s, c);
+	return (res);
 }
 //int main(void)
 //{
-//	int	i = 0;
 //	char	*str = "xxsaxx ditx xxxxxquoi xsplitxxx xxxyx xxxfaisx xxserrerxx";
 //	char	**split = ft_split(str, 'x');
-//	while (split[i])
+//	while (*split)
 //	{
-//		printf("%s", split[i]);
-//		i++;
+//		printf("%s", *split);
+//		split++;
 //	}
-//	free (split);
+//	free (*split);
 //	return (0);
 //}
