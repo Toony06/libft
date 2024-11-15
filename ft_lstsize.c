@@ -1,49 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/10 14:26:59 by toroman           #+#    #+#             */
-/*   Updated: 2024/11/15 16:56:50 by toroman          ###   ########.fr       */
+/*   Created: 2024/11/15 14:07:05 by toroman           #+#    #+#             */
+/*   Updated: 2024/11/15 16:46:31 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	ft_lstsize(t_list *lst)
 {
-	int			i;
-	int			j;
-	char		*result;
+	int	i;
 
 	i = 0;
-	j = 0;
-	if (s1 == NULL || s2 == NULL)
+	if (!lst)
 		return (0);
-	result = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (result == NULL)
-		return (0);
-	while (s1[i])
+	while (lst != NULL)
 	{
-		result[i] = s1[i];
+		lst = lst->next;
 		i++;
 	}
-	while (s2[j])
-	{
-		result[i] = s2[j];
-		i++;
-		j++;
-	}
-	result[i] = '\0';
-	return (result);
+	return (i);
 }
 //int	main()
 //{
-//	char	*str = "tony";
-//	char	*strr = "le gitan";
-//	char	*res = ft_strjoin(str, strr);
-//	printf("%s\n", res);
-//	free(res);
+//	t_list *str = malloc(sizeof(t_list));
+//	str->content = malloc(sizeof(int));
+//	*(int *)(str->content) = 10;
+//	str->next = malloc(sizeof(t_list));
+//	str->next->content = malloc(sizeof(int));
+//	*(int *)(str->next->content) = 20;
+//	str->next->next = NULL;
+
+//	int	size = ft_lstsize(str);
+//	printf("%d\n", size);
+//	free(str->next);
+//	free(str);
+//	return (0);
 //}
